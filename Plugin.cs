@@ -60,14 +60,14 @@ namespace DvergrPieces
             teq_dvergrBlackCoreStandTorch.Category.Add(PieceManager.BuildPieceCategory.Furniture);
             teq_dvergrBlackCoreStandTorch.Crafting.Set(PieceManager.CraftingTable.Workbench); // Set a crafting station requirement for the piece.
 
-            //BuildPiece teq_dvergrFermenter = new("dvergr_pieces_bundle_tq", "dvergr_fermenter_tq");
+            BuildPiece teq_dvergrFermenter = new("dvergr_pieces_bundle_tq", "dvergr_fermenter_tq");
             //teq_dvergrFermenter.Name.English("Dvergr Fermenter"); // Localize the name and description for the building piece for a language.
             //teq_dvergrFermenter.Description.English("Dvergr Fermenter");
-            //teq_dvergrFermenter.RequiredItems.Add("ElderBark", 20, true); // Set the required items to build. Format: ("PrefabName", Amount, Recoverable)
-            //teq_dvergrFermenter.RequiredItems.Add("Iron", 5, true);
-            //teq_dvergrFermenter.RequiredItems.Add("Resin", 10, true);
-            //teq_dvergrFermenter.Category.Add(PieceManager.BuildPieceCategory.Crafting);
-            //teq_dvergrFermenter.Crafting.Set(PieceManager.CraftingTable.Forge); // Set a crafting station requirement for the piece.
+            teq_dvergrFermenter.RequiredItems.Add("ElderBark", 20, true); // Set the required items to build. Format: ("PrefabName", Amount, Recoverable)
+            teq_dvergrFermenter.RequiredItems.Add("Iron", 5, true);
+            teq_dvergrFermenter.RequiredItems.Add("Resin", 10, true);
+            teq_dvergrFermenter.Category.Add(PieceManager.BuildPieceCategory.Crafting);
+            teq_dvergrFermenter.Crafting.Set(PieceManager.CraftingTable.Forge); // Set a crafting station requirement for the piece.
 
             // Format: new("AssetBundleName", "PrefabName", "FolderName");
             //BuildPiece examplePiece1 = new("funward", "funward", "FunWard");
@@ -117,7 +117,7 @@ namespace DvergrPieces
             // What if you want to use a custom shader from the game (like Custom/Piece that allows snow!!!) but your unity shader isn't set to Custom/Piece? Format: (GameObject, MaterialReplacer.ShaderType.)
             //MaterialReplacer.RegisterGameObjectForShaderSwap(examplePiece3.Prefab, MaterialReplacer.ShaderType.PieceShader);
             MaterialReplacer.RegisterGameObjectForShaderSwap(teq_DvergrChest.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
-            //MaterialReplacer.RegisterGameObjectForShaderSwap(teq_dvergrFermenter.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
+            MaterialReplacer.RegisterGameObjectForShaderSwap(teq_dvergrFermenter.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
             MaterialReplacer.RegisterGameObjectForShaderSwap(teq_dvergrBlackCoreStandTorch.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
 
             // Detailed instructions on how to use the MaterialReplacer can be found on the current PieceManager Wiki. https://github.com/AzumattDev/PieceManager/wiki
